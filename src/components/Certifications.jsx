@@ -27,13 +27,29 @@ export default function Certifications() {
       description:
         "Gained hands-on experience with SQL queries, joins, filtering, and data aggregation.",
     },
-     {
+    {
       title: "Full Stack Web Development",
       issuer: "Udemy",
       date: "July 2025",
       link: "https://www.udemy.com/certificate/UC-b7aa6869-97f3-4389-9095-c72b444e1e08/",
       description:
         "Mastered full stack development using MERN, Tailwind, React, and Node.js with real-world projects and AI integration.",
+    },
+    {
+      title: "Master Agile and Scrum Basics",
+      issuer: "Udemy",
+      date: "Sep 2025",
+      link: "https://www.udemy.com/certificate/UC-f74b4fef-403d-4674-bf79-b0bbe3899053/",
+      description:
+        "Comprehensive training on Agile values, principles, Scrum framework, and Agile project management. Covered Scrum roles, events, artifacts, and real-world application of Agile for project success.",
+    },
+    {
+      title: "Generative AI & Prompt Engineering",
+      issuer: "Udemy",
+      date: "Sep 2025",
+      link: "https://www.udemy.com/certificate/UC-ca20199a-ee2d-4f9d-944e-0161572849aa/",
+      description:
+        "Explored Generative AI, large language models (LLMs), and AI agents. Learned prompt engineering techniques including zero-shot, one-shot, few-shot, modifiers, and advanced methods like Chain of Thought and iterative prompting.",
     },
   ];
 
@@ -57,7 +73,8 @@ export default function Certifications() {
               {cert.title}
             </h3>
             <p className="text-gray-600 text-md md:text-lg mb-2">
-              Issued by <span className="font-medium">{cert.issuer}</span> · {cert.date}
+              Issued by <span className="font-medium">{cert.issuer}</span> ·{" "}
+              {cert.date}
             </p>
             <p className="text-gray-700 text-sm mb-3">{cert.description}</p>
             {cert.link && (
