@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 export default function Projects() {
   const projects = [
     {
@@ -16,6 +15,26 @@ export default function Projects() {
         "Express.js",
         "AssemblyAI",
         "Supabase",
+      ],
+    },
+    {
+      title: "GoRide",
+      description:
+        "Full-stack ride-hailing web app inspired by Uber. Users can book rides, track drivers in real-time. Drivers can accept rides, navigate, and track earnings. Includes responsive UI and real-time communication with Socket.io.",
+      image: "/images/ridego.png",
+      github: "https://github.com/sandeshshinde03/RideGo-Frontend",
+      live: "https://ride-go-frontend.vercel.app/",
+      tech: [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "Socket.io",
+        "Tailwind CSS",
+        "JWT",
+        "Axios",
+        "GSAP",
+        "Maptiler",
       ],
     },
     {
@@ -45,7 +64,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 sm:px-4 md:px-6 lg:px-8 bg-gray-50 font-inter">
+    <section
+      id="projects"
+      className="py-24 sm:px-4 md:px-6 lg:px-8 bg-gray-50 font-inter"
+    >
       <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-gray-800">
         Projects
       </h2>
@@ -53,22 +75,29 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+            className="bg-white rounded-2xl shadow hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
           >
             <img
               src={project.image}
               alt={project.title}
               className="w-full h-56 object-cover"
             />
-            <div className="p-6">
-              <h3 className="text-xl md:text-2xl font-bold mb-3">{project.title}</h3>
-              <p className="text-md md:text-lg text-gray-700 mb-4">{project.description}</p>
+            <div className="p-6 flex flex-col h-full">
+              <h3 className="text-xl md:text-2xl font-bold mb-3">
+                {project.title}
+              </h3>
+              <p className="text-md md:text-lg text-gray-700 mb-4">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2 mb-4 text-sm text-gray-600">
                 {project.tech.map((t, i) => (
-                  <span key={i} className="bg-gray-200 px-3 py-1 rounded">{t}</span>
+                  <span key={i} className="bg-gray-200 px-3 py-1 rounded">
+                    {t}
+                  </span>
                 ))}
               </div>
-              <div className="flex gap-4">
+              {/* Buttons stay at the bottom */}
+              <div className="flex gap-4 mt-auto">
                 {project.github && (
                   <a
                     href={project.github}
@@ -86,7 +115,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live 
+                    Live
                   </a>
                 )}
               </div>
